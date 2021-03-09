@@ -66,7 +66,7 @@ jobs:
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
         chmod +x $DIY_P1_SH
         cd openwrt
-        cd packag/lean
+        cd package/lean
         git clone https://github.com/garypang13/luci-app-bypass.git
         git clone https://github.com/garypang13/luci-app-dnsfilter.git
         cd .. && cd ..
