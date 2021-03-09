@@ -66,11 +66,11 @@ jobs:
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
         chmod +x $DIY_P1_SH
         cd openwrt
-        $GITHUB_WORKSPACE/$DIY_P1_SH
         cd packag/lean
         git clone https://github.com/garypang13/luci-app-bypass.git
         git clone https://github.com/garypang13/luci-app-dnsfilter.git
         cd .. && cd ..
+        $GITHUB_WORKSPACE/$DIY_P1_SH
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
