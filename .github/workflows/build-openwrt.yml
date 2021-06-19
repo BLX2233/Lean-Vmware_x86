@@ -71,7 +71,6 @@ jobs:
         git clone https://github.com/garypang13/luci-app-dnsfilter.git
         git clone https://github.com/garypang13/smartdns-le.git
         git clone https://github.com/lisaac/luci-app-dockerman.git
-        git clone https://github.com/lisaac/luci-lib-docker.git
         cd .. && cd ..
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
