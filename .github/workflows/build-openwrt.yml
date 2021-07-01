@@ -68,10 +68,10 @@ jobs:
         chmod +x $DIY_P1_SH
         cd openwrt
         cd package/lean
-        git clone https://github.com/garypang13/luci-app-bypass.git
-        git clone https://github.com/garypang13/luci-app-dnsfilter.git
-        git clone https://github.com/garypang13/smartdns-le.git
-        git clone https://github.com/lisaac/luci-app-dockerman.git
+        #git clone https://github.com/garypang13/luci-app-bypass.git
+        #git clone https://github.com/garypang13/luci-app-dnsfilter.git
+        #git clone https://github.com/garypang13/smartdns-le.git
+        #git clone https://github.com/lisaac/luci-app-dockerman.git
         cd .. && cd ..
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
@@ -81,8 +81,8 @@ jobs:
     - name: Install feeds
       run: |
         cd openwrt && ./scripts/feeds install -a
-        find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-ssr-redir/shadowsocksr-libev-alt/g' {}
-        find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-ssr-server/shadowsocksr-libev-server/g' {}
+        #find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-ssr-redir/shadowsocksr-libev-alt/g' {}
+        #find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-ssr-server/shadowsocksr-libev-server/g' {}
 
     - name: Load custom configuration
       run: |
